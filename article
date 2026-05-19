@@ -1,0 +1,23 @@
+I Built an Index That Tracks How Unhinged Your Fanbase Is.  Updated Daily.
+
+I'm a Kentucky fan.  I listen to games on the radio, I check ESPN for scores, and I spend an embarrassing amount of time on X reading what other fans are saying.
+
+Here's the thing though.  ESPN will tell you Kentucky lost by eight and that the coach has "work to do."  That's technically accurate.  But on Reddit, the Kentucky fanbase is already three steps into the grieving process.  Someone has written a 600-word post explaining why this loss specifically proves the program has been in structural decline since 2019.  Another guy responded with "fire everyone."  A third guy responded to that guy with "you said this in 2017 and we won the SEC the next year."  Everyone is wrong.  Everyone is confident.  It's genuinely great content.
+
+And it's not just Kentucky.  After any Alabama loss — which, granted, doesn't happen often enough for my taste — the Crimson Tide subreddit briefly becomes a disaster movie.  A fanbase of several million people who expect nothing less than perfection suddenly has to process a single bad half against a team they were supposed to beat by 30.  The ESPN story says Alabama fell short.  The Reddit story says the sky is falling and the coach might be cooked.
+
+The gap between those two stories is what I wanted to measure.
+
+So I'm building a site called Fanbase Weather.  The concept is simple: every day, it scores about 40 college football and basketball programs on how chaotic their fanbase is acting.  You can see who's panicking, who's in denial, who's getting piled on by rival fans, and who has fully committed to existential despair.  Updated each morning so you know exactly which corner of college sports Twitter is on fire before you even open the app.
+
+It's been about a week.
+
+The data problem is genuinely interesting.  The site scrapes Reddit, Twitter, and news sources, then feeds all of that into Claude Haiku with very explicit scoring instructions.  Four metrics come out of it: Panic Temp, Copium Levels, Rival Pressure, and Doom Index.  Those roll up into a single Chaos Score from 1 to 100, and every team gets a one-sentence Spiral Trigger explaining what set the fanbase off that day.
+
+The normalization piece took real thought.  Alabama has millions of fans.  Kentucky has considerably fewer.  If you just count raw posts and articles, Alabama is going to show up as chaotic on a perfectly normal Tuesday just because they have more people yelling into the void on any given day.  National media also covers big programs more, which means more news articles and more content to react to.  More volume does not equal more chaos.  So I had to normalize the scoring against fanbase size to get something that actually reflects how unhinged a fanbase is relative to its own baseline.  That math is what makes the index honest instead of just a popularity contest.
+
+The build itself has been a week of nights and weekends using Claude Code, Google Stitch for the design, and Supabase for the database.  The grill-me skill in Claude Code sat me down before I wrote a single line and interrogated every assumption I had about the scoring system.  What counts as panic versus doom?  Does one bad recruiting cycle move the Doom Index or does it take a pattern?  What happens when there's no news on a given day?  I came out of that session with a scoring rubric that could actually hold up under weird edge cases, not just a vague concept I'd convinced myself made sense.
+
+Kentucky is at a Category 3 right now.  I did not rig that.  The data did that on its own.
+
+The site is almost live at fanbaseweather.com.  And yes, I am aware that I am a Kentucky fan who built a chaos tracker that immediately confirmed Kentucky fans are currently losing their minds.  I am choosing to see that as a feature.
