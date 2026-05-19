@@ -21,3 +21,21 @@ The build itself has been a week of nights and weekends using Claude Code, Googl
 Kentucky is at a Category 3 right now.  I did not rig that.  The data did that on its own.
 
 The site is almost live at fanbaseweather.com.  And yes, I am aware that I am a Kentucky fan who built a chaos tracker that immediately confirmed Kentucky fans are currently losing their minds.  I am choosing to see that as a feature.
+
+
+
+Here's the expanded version of that section:
+
+The build itself has been a week of nights and weekends using Claude Code, Google Stitch for the design, and Supabase for the database.  I want to be clear about something: I am not a UI person.  I have never been a UI person.  Left to my own devices, the site would be a table with no styling and Times New Roman.  The fact that Fanbase Weather looks like an actual product is entirely because of Google Stitch, which lets you describe what you want and generates real, high-fidelity screens you can react to and iterate on.  I described the aesthetic I wanted (weather dashboard, sports broadcast energy, slightly unhinged on purpose) and Stitch produced screens I could actually work with.  No wireframes, no back-and-forth with a designer, no placeholder boxes labeled "image goes here."  I went through probably a dozen rounds of iteration.  I kept going because it was fast enough that momentum never died.
+
+Claude Code handled the actual build.  I'd describe what I wanted and it wrote it, wired it up, and caught the places where my thinking was sloppy.  The grill-me skill in Claude Code sat me down before I touched a single line and interrogated every assumption I had about the scoring system.  What counts as panic versus doom?  Does one bad recruiting cycle move the Doom Index or does it take a pattern?  What happens when there's no news on a given day?  I came out of that session with a scoring rubric that could hold up under weird edge cases, not just a vague concept I'd talked myself into.
+
+The site itself has five pages.  The homepage leads with whatever team is having the worst day, then drops into a leaderboard of the top five chaos programs right now.  Below that is a subscribe section because if your fanbase is spiraling, you probably want to know about it first thing in the morning.  The rankings page shows all 40 programs sorted by chaos score with expandable cards that break out each metric and surface real fan quotes pulled from Reddit.  The team pages go deeper: today's score, a 30-day history chart, and a rolling seven-day strip so you can see whether a fanbase is trending up or cooling off.
+
+There's also a Vault page with a classified document aesthetic that archives each day's scores going back 30 days.  It looks like someone leaked internal government files, except the files are about whether Ohio State fans are panicking.
+
+The tone across the whole site is Barstool-adjacent.  Every team has what I'm calling a Melt Scale, which is a logo progression that literally shows the program's mascot melting as the chaos score climbs.  A Category 1 is clean and normal.  By Category 5, things are falling apart visually.  The Spiral Trigger, the one-sentence explanation of what set fans off, is written to sound like a sportscaster who stopped being professional at some point and never recovered.  Fan quotes get surfaced directly from Reddit so you can see exactly what kind of takes are circulating.  The point is not to be a neutral data dashboard.  The point is to make you laugh at whatever fanbase is having a complete breakdown over a third-quarter turnover in week two of the season.
+
+Kentucky is at a Category 3 right now.  I did not rig that.  The data did that on its own.
+
+The site is almost live at fanbaseweather.com.  And yes, I am aware that I am a Kentucky fan who built a chaos tracker that immediately confirmed Kentucky fans are currently losing their minds.  I am choosing to see that as a feature.
